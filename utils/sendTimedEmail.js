@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { emailQueue,timedQueue } from "./mq.js";
-dotenv.config({ path: "./config/config.env" });
+dotenv.config();
 const sendTimedEmail = async (options) => {
   // var transporter = nodemailer.createTransport({
   //   host: process.env.SMTP_HOST,

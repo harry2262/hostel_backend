@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import sendgrid from "@sendgrid/mail";
 
-dotenv.config({ path: "./config/config.env" });
+dotenv.config();
 
 
 sendgrid.setApiKey(process.env.SMTP_PASSWORD);

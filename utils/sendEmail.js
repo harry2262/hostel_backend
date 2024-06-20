@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import { emailQueue } from "./mq.js";
 
 
-dotenv.config({ path: "./config/config.env" });
+dotenv.config();
 const sendEmail = async (options) => {
   // var transporter = nodemailer.createTransport({
   //   host: process.env.SMTP_HOST,
