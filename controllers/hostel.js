@@ -12,7 +12,6 @@ export const  addHostel = catchAsyncErrors(async (req, res, next) => {
   };
   let result = await Hostel.findOne({ name: hostelData.name });
   if (result) {
-    console.log(result);
     return next(new ErrorHandler("hostel already exists", 400));
   }
   result = await Hostel.create(hostelData);

@@ -93,7 +93,7 @@ export const  bookRoom = catchAsyncErrors(async (req, res, next) => {
   if (!hostelid) {
     return next(new ErrorHandler("Hostel not found", 400));
   }
-  console.log(hostelid);
+  
   if (hostelid.roomCount < roomNumber) {
     return next(new ErrorHandler("Room not found", 400));
   }

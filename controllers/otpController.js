@@ -40,8 +40,6 @@ export const  sendOTP = async (req, res) => {
 
 export const  verifyOTP = async (req, res, next) => {
   const { email, otp } = req.body;
-console.log(req.body);
-
   try {
     // Find the latest OTP for the given email
     const latestOTP = await OTP.findOne({ email })
